@@ -1,9 +1,13 @@
-resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
+fx_version 'cerulean'
+game 'gta5'
+
+description 'QB-Interior'
+version '1.0.0'
 
 client_scripts {
 	'client/main.lua',
 	'client/shells.lua',
-	'client/furnished.lua',
+	'client/furnished.lua'
 }
  
 files {
@@ -20,7 +24,7 @@ files {
 	'stream/caravan_shell/caravan.ytyp',
 	'stream/frankelientje/frankelientje.ytyp',
 	'stream/tante_shell/tante.ytyp',
-	'stream/methlab_shell/methlab_shell.ytyp',
+	'stream/methlab_shell/methlab_shell.ytyp'
 }
 
 data_file 'DLC_ITYP_REQUEST' 'stream/v_int_20.ytyp'
@@ -59,5 +63,9 @@ exports {
 
 	'CreateTier1HouseFurnished',
 	'CreateHotelFurnished',
-	'CreateApartmentFurnished',
+	'CreateApartmentFurnished'
+}
+
+dependencies {
+	'qb-core'
 }
