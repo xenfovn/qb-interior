@@ -5,6 +5,7 @@ description 'QB-Interior'
 version '1.0.0'
 
 client_scripts {
+	'@qb-core/import.lua',
 	'client/main.lua',
 	'client/shells.lua',
 	'client/furnished.lua'
