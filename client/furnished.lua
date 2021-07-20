@@ -112,7 +112,7 @@ function CreateApartmentFurnished(spawn)
     FreezeEntityPosition(house, true)
 	table.insert(objects, house)
 
-	TeleportToInterior(spawn.x - 1.52089355468, spawn.y - 2.00144140625, spawn.z + 1.5, POIOffsets.exit.h)
+	TeleportToInterior(spawn.x - 3.32089355468, spawn.y - 3.69636328125, spawn.z + 1.2, POIOffsets.exit.h)
 	if IsNew then
 		SetTimeout(750, function()
 			TriggerEvent('qb-clothes:client:CreateFirstCharacter')
