@@ -18,7 +18,7 @@ local function DespawnInterior(objects, cb)
     end)
 end
 
-local function TeleportToInterior(x, y, z, h)
+function TeleportToInterior(x, y, z, h)
     Citizen.CreateThread(function()
         SetEntityCoords(PlayerPedId(), x, y, z, 0, 0, 0, false)
         SetEntityHeading(PlayerPedId(), h)
