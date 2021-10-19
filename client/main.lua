@@ -76,7 +76,7 @@ local function CreateApartmentShell(spawn)
 	local house = CreateObject(`shell_v16low`, spawn.x, spawn.y, spawn.z, false, false, false)
     FreezeEntityPosition(house, true)
 	objects[#objects+1] = house
-	TeleportToInterior(spawn.x + 4.7, spawn.y - 6.2, spawn.z + 2.0, POIOffsets.exit.h)
+	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
 end
 
@@ -95,7 +95,7 @@ local function CreateTier1House(spawn)
 	local house = CreateObject(`shell_v16mid`, spawn.x, spawn.y, spawn.z, false, false, false)
     FreezeEntityPosition(house, true)
     objects[#objects+1] = house
-	TeleportToInterior(spawn.x - 9.52089355468, spawn.y + 2.80144140625, spawn.z + 1.5, POIOffsets.exit.h)
+	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
 end
 
@@ -114,7 +114,7 @@ local function CreateTrevorsShell(spawn)
 	local house = CreateObject(`shell_trevor`, spawn.x, spawn.y, spawn.z, false, false, false)
     FreezeEntityPosition(house, true)
 	objects[#objects+1] = house
-	TeleportToInterior(spawn.x + 0.0, spawn.y - 3.20144140625, spawn.z + 6.5, POIOffsets.exit.h)
+	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
 end
 
@@ -133,7 +133,7 @@ local function CreateCaravanShell(spawn)
 	local house = CreateObject(`shell_trailer`, spawn.x, spawn.y, spawn.z, false, false, false)
     FreezeEntityPosition(house, true)
 	objects[#objects+1] = house
-	TeleportToInterior(spawn.x - 1.3, spawn.y + POIOffsets.exit.y + 0.2, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
+	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
 end
 
@@ -152,7 +152,7 @@ local function CreateLesterShell(spawn)
 	local house = CreateObject(`shell_lester`, spawn.x, spawn.y, spawn.z, false, false, false)
     FreezeEntityPosition(house, true)
 	objects[#objects+1] = house
-	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z, POIOffsets.exit.h)
+	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
 end
 
@@ -171,7 +171,7 @@ local function CreateRanchShell(spawn)
 	local house = CreateObject(`shell_ranch`, spawn.x, spawn.y, spawn.z, false, false, false)
     FreezeEntityPosition(house, true)
 	objects[#objects+1] = house
-	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + 2.0, POIOffsets.exit.h)
+	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
 end
 
