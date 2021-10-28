@@ -30,6 +30,9 @@ files {
 	-- 'stream/StashhousesShells/shellpropsv16.ytyp',
 	-- 'stream/StoreShells/shellpropsv4.ytyp',
 	-- 'stream/WarehouseShells/shellpropsv5.ytyp'
+	-- 'stream/AllShellsBundle/allshellsbundle.ytyp'
+	-- 'stream/AllFurnishedShellsBundle/allfurnishedshellsbundle.ytyp'
+	-- 'stream/AllEmptyShellsBundle/allemptyshellsbundle.ytyp'
 }
 
 -- Default (included)
@@ -67,5 +70,11 @@ data_file 'DLC_ITYP_REQUEST' 'stream/startingapt/shellpropsv11.ytyp'
 -- data_file 'DLC_ITYP_REQUEST' 'stream/StoreShells/shellpropsv4.ytyp'
 -- -- Warehouse
 -- data_file 'DLC_ITYP_REQUEST' 'stream/WarehouseShells/shellpropsv5.ytyp'
+-- -- All Shells Bundle
+-- data_file 'DLC_ITYP_REQUEST' 'stream/AllShellsBundle/allshellsbundle.ytyp'
+-- -- All Furnished Bundle
+-- data_file 'DLC_ITYP_REQUEST' 'stream/AllFurnishedShellsBundle/allfurnishedshellsbundle.ytyp'
+-- -- All Empty Bundle
+-- data_file 'DLC_ITYP_REQUEST' 'stream/AllEmptyShellsBundle/allemptyshellsbundle.ytyp'
 
 lua54 'yes'
