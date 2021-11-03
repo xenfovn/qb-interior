@@ -140,7 +140,7 @@ end
 local function CreateClassicHouse2(spawn)
 	local objects = {}
     local POIOffsets = {}
-	POIOffsets.exit = json.decode('{"x": 0, "y": 0, "z": 0, "h": 0}')
+	POIOffsets.exit = json.decode('{"x": 4.78, "y": -2.09, "z": 5.26, "h": 90.58}')
 	DoScreenFadeOut(500)
     while not IsScreenFadedOut() do
         Citizen.Wait(10)
