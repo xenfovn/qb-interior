@@ -7,7 +7,7 @@ end)
 -- Functions
 
 local function DespawnInterior(objects, cb)
-    Citizen.CreateThread(function()
+    CreateThread(function()
         for k, v in pairs(objects) do
             if DoesEntityExist(v) then
                 DeleteEntity(v)
@@ -19,11 +19,11 @@ local function DespawnInterior(objects, cb)
 end
 
 function TeleportToInterior(x, y, z, h)
-    Citizen.CreateThread(function()
+    CreateThread(function()
         SetEntityCoords(PlayerPedId(), x, y, z, 0, 0, 0, false)
         SetEntityHeading(PlayerPedId(), h)
 
-        Citizen.Wait(100)
+        Wait(100)
 
         DoScreenFadeIn(1000)
     end)
@@ -40,11 +40,11 @@ local function CreateApartmentFurnished(spawn)
 	POIOffsets.logout = json.decode('{"x": -0.8, "y": 1.0, "z": 1.0, "h":2.263}')
     DoScreenFadeOut(500)
     while not IsScreenFadedOut() do
-        Citizen.Wait(10)
+        Wait(10)
     end
 	RequestModel(`furnitured_midapart`)
 	while not HasModelLoaded(`furnitured_midapart`) do
-	    Citizen.Wait(3)
+	    Wait(3)
 	end
 	local house = CreateObject(`furnitured_midapart`, spawn.x, spawn.y, spawn.z, false, false, false)
     FreezeEntityPosition(house, true)
@@ -67,11 +67,11 @@ local function CreateApartmentShell(spawn)
 	POIOffsets.exit = json.decode('{"x": 4.693, "y": -6.015, "z": 1.11, "h":358.634}')
 	DoScreenFadeOut(500)
     while not IsScreenFadedOut() do
-        Citizen.Wait(10)
+        Wait(10)
     end
 	RequestModel(`shell_v16low`)
 	while not HasModelLoaded(`shell_v16low`) do
-	    Citizen.Wait(1000)
+	    Wait(1000)
 	end
 	local house = CreateObject(`shell_v16low`, spawn.x, spawn.y, spawn.z, false, false, false)
     FreezeEntityPosition(house, true)
@@ -86,11 +86,11 @@ local function CreateTier1House(spawn)
 	POIOffsets.exit = json.decode('{"x": 1.561, "y": -14.305, "z": 1.147, "h":2.263}')
 	DoScreenFadeOut(500)
     while not IsScreenFadedOut() do
-        Citizen.Wait(10)
+        Wait(10)
     end
 	RequestModel(`shell_v16mid`)
 	while not HasModelLoaded(`shell_v16mid`) do
-	    Citizen.Wait(1000)
+	    Wait(1000)
 	end
 	local house = CreateObject(`shell_v16mid`, spawn.x, spawn.y, spawn.z, false, false, false)
     FreezeEntityPosition(house, true)
@@ -105,11 +105,11 @@ local function CreateTrevorsShell(spawn)
 	POIOffsets.exit = json.decode('{"x": 0.374, "y": -3.789, "z": 2.428, "h":358.633}')
 	DoScreenFadeOut(500)
     while not IsScreenFadedOut() do
-        Citizen.Wait(10)
+        Wait(10)
     end
 	RequestModel(`shell_trevor`)
 	while not HasModelLoaded(`shell_trevor`) do
-	    Citizen.Wait(1000)
+	    Wait(1000)
 	end
 	local house = CreateObject(`shell_trevor`, spawn.x, spawn.y, spawn.z, false, false, false)
     FreezeEntityPosition(house, true)
@@ -124,11 +124,11 @@ local function CreateCaravanShell(spawn)
 	POIOffsets.exit = json.decode('{"z":3.3, "y":-2.1, "x":-1.4, "h":358.633972168}')
 	DoScreenFadeOut(500)
     while not IsScreenFadedOut() do
-        Citizen.Wait(10)
+        Wait(10)
     end
 	RequestModel(`shell_trailer`)
 	while not HasModelLoaded(`shell_trailer`) do
-	    Citizen.Wait(1000)
+	    Wait(1000)
 	end
 	local house = CreateObject(`shell_trailer`, spawn.x, spawn.y, spawn.z, false, false, false)
     FreezeEntityPosition(house, true)
@@ -143,11 +143,11 @@ local function CreateLesterShell(spawn)
     POIOffsets.exit = json.decode('{"x":-1.780, "y":-0.795, "z":1.1,"h":270.30}')
 	DoScreenFadeOut(500)
     while not IsScreenFadedOut() do
-        Citizen.Wait(10)
+        Wait(10)
     end
 	RequestModel(`shell_lester`)
 	while not HasModelLoaded(`shell_lester`) do
-	    Citizen.Wait(1000)
+	    Wait(1000)
 	end
 	local house = CreateObject(`shell_lester`, spawn.x, spawn.y, spawn.z, false, false, false)
     FreezeEntityPosition(house, true)
@@ -162,11 +162,11 @@ local function CreateRanchShell(spawn)
     POIOffsets.exit = json.decode('{"x":-1.257, "y":-5.469, "z":2.5, "h":270.57,}')
 	DoScreenFadeOut(500)
     while not IsScreenFadedOut() do
-        Citizen.Wait(10)
+        Wait(10)
     end
 	RequestModel(`shell_ranch`)
 	while not HasModelLoaded(`shell_ranch`) do
-	    Citizen.Wait(1000)
+	    Wait(1000)
 	end
 	local house = CreateObject(`shell_ranch`, spawn.x, spawn.y, spawn.z, false, false, false)
     FreezeEntityPosition(house, true)
@@ -181,11 +181,11 @@ local function CreateHouseRobbery(spawn)
 	POIOffsets.exit = json.decode('{"x": 1.46, "y": -10.33, "z": 1.06, "h": 0.39}')
 	DoScreenFadeOut(500)
     while not IsScreenFadedOut() do
-        Citizen.Wait(10)
+        Wait(10)
     end
 	RequestModel(`furnitured_midapart`)
 	while not HasModelLoaded(`furnitured_midapart`) do
-	    Citizen.Wait(1000)
+	    Wait(1000)
 	end
 	local house = CreateObject(`furnitured_midapart`, spawn.x, spawn.y, spawn.z, false, false, false)
     FreezeEntityPosition(house, true)
