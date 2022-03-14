@@ -2,7 +2,7 @@
 
 **Shells provided by K4MB1**
 
-https://k4mb1.tebex.io/
+https://www.k4mb1maps.com/
 
 https://discord.gg/JrjkacM
 
