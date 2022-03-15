@@ -28,10 +28,10 @@ files {
 	-- 'stream/OfficeShells/shellpropsv3.ytyp',
 	-- 'stream/StashhousesShells/shellpropsv16.ytyp',
 	-- 'stream/StoreShells/shellpropsv4.ytyp',
-	-- 'stream/WarehouseShells/shellpropsv5.ytyp'
-	-- 'stream/AllShellsBundle/allshellsbundle.ytyp'
-	-- 'stream/AllFurnishedShellsBundle/allfurnishedshellsbundle.ytyp'
-	-- 'stream/AllEmptyShellsBundle/allemptyshellsbundle.ytyp'
+	-- 'stream/WarehouseShells/shellpropsv5.ytyp',
+	-- 'stream/AllShellsBundle/allshellsbundle.ytyp',
+	-- 'stream/AllFurnishedShellsBundle/allfurnishedshellsbundle.ytyp',
+	-- 'stream/AllEmptyShellsBundle/allemptyshellsbundle.ytyp',
 }
 
 -- Default (included)
