@@ -6,18 +6,6 @@ end)
 
 -- Functions
 
-local function DespawnInterior(objects, cb)
-    CreateThread(function()
-        for k, v in pairs(objects) do
-            if DoesEntityExist(v) then
-                DeleteEntity(v)
-            end
-        end
-
-        cb()
-    end)
-end
-
 function TeleportToInterior(x, y, z, h)
     CreateThread(function()
         SetEntityCoords(PlayerPedId(), x, y, z, 0, 0, 0, false)
@@ -29,9 +17,21 @@ function TeleportToInterior(x, y, z, h)
     end)
 end
 
+exports('DespawnInterior', function(objects, cb)
+    CreateThread(function()
+        for k, v in pairs(objects) do
+            if DoesEntityExist(v) then
+                DeleteEntity(v)
+            end
+        end
+
+        cb()
+    end)
+end)
+
 -- Starting Apartment
 
-local function CreateApartmentFurnished(spawn)
+exports('CreateApartmentFurnished', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -1.50, "y": 10.0, "z": 1.3, "h":358.50}')
@@ -57,11 +57,11 @@ local function CreateApartmentFurnished(spawn)
 		end)
 	end
     return { objects, POIOffsets }
-end
+end)
 
 -- Shells (in order by tier starting at 1)
 
-local function CreateApartmentShell(spawn)
+exports('CreateApartmentShell', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 4.693, "y": -6.015, "z": 1.11, "h":358.634}')
@@ -78,9 +78,9 @@ local function CreateApartmentShell(spawn)
 	objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateTier1House(spawn)
+exports('CreateTier1House', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 1.561, "y": -14.305, "z": 1.147, "h":2.263}')
@@ -97,9 +97,9 @@ local function CreateTier1House(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateTrevorsShell(spawn)
+exports('CreateTrevorsShell', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 0.374, "y": -3.789, "z": 2.428, "h":358.633}')
@@ -116,9 +116,9 @@ local function CreateTrevorsShell(spawn)
 	objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateCaravanShell(spawn)
+exports('CreateCaravanShell', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"z":3.3, "y":-2.1, "x":-1.4, "h":358.633972168}')
@@ -135,9 +135,9 @@ local function CreateCaravanShell(spawn)
 	objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateLesterShell(spawn)
+exports('CreateLesterShell', function(spawn)
 	local objects = {}
     local POIOffsets = {}
     POIOffsets.exit = json.decode('{"x":-1.780, "y":-0.795, "z":1.1,"h":270.30}')
@@ -154,9 +154,9 @@ local function CreateLesterShell(spawn)
 	objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateRanchShell(spawn)
+exports('CreateRanchShell', function(spawn)
 	local objects = {}
     local POIOffsets = {}
     POIOffsets.exit = json.decode('{"x":-1.257, "y":-5.469, "z":2.5, "h":270.57,}')
@@ -173,9 +173,9 @@ local function CreateRanchShell(spawn)
 	objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateHouseRobbery(spawn)
+exports('CreateHouseRobbery', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 1.46, "y": -10.33, "z": 1.06, "h": 0.39}')
@@ -192,9 +192,9 @@ local function CreateHouseRobbery(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateContainer(spawn)
+exports('CreateContainer', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 0.08, "y": -5.73, "z": 1.24, "h": 359.32}')
@@ -211,9 +211,9 @@ local function CreateContainer(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateFurniMid(spawn)
+exports('CreateFurniMid', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 1.46, "y": -10.33, "z": 1.06, "h": 0.39}')
@@ -230,9 +230,9 @@ local function CreateFurniMid(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateFurniMotelModern(spawn)
+exports('CreateFurniMotelModern', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 4.98, "y": 4.35, "z": 1.16, "h": 179.79}')
@@ -249,9 +249,9 @@ local function CreateFurniMotelModern(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateFranklinAunt(spawn)
+exports('CreateFranklinAunt', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -0.36, "y": -5.89, "z": 1.70, "h": 358.21}')
@@ -268,9 +268,9 @@ local function CreateFranklinAunt(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateGarageMed(spawn)
+exports('CreateGarageMed', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 13.90, "y": 1.63, "z": 1.0, "h": 87.05}')
@@ -287,9 +287,9 @@ local function CreateGarageMed(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateMichael(spawn)
+exports('CreateMichael', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -9.49, "y": 5.54, "z": 9.91, "h": 270.86}')
@@ -306,9 +306,9 @@ local function CreateMichael(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateOffice1(spawn)
+exports('CreateOffice1', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": 1.88, "y": 5.06, "z": 2.05, "h": 180.07}')
@@ -325,9 +325,9 @@ local function CreateOffice1(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateStore1(spawn)
+exports('CreateStore1', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -2.61, "y": -4.73, "z": 1.08, "h": 1.0}')
@@ -344,9 +344,9 @@ local function CreateStore1(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateWarehouse1(spawn)
+exports('CreateWarehouse1', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -8.95, "y": 0.51, "z": 1.04, "h": 268.82}')
@@ -363,9 +363,9 @@ local function CreateWarehouse1(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
+end)
 
-local function CreateFurniMotelStandard(spawn)
+exports('CreateFurniMotelStandard', function(spawn)
 	local objects = {}
     local POIOffsets = {}
 	POIOffsets.exit = json.decode('{"x": -0.43, "y": -2.51, "z": 1.0, "h": 271.29}')
@@ -382,26 +382,4 @@ local function CreateFurniMotelStandard(spawn)
     objects[#objects+1] = house
 	TeleportToInterior(spawn.x + POIOffsets.exit.x, spawn.y + POIOffsets.exit.y, spawn.z + POIOffsets.exit.z, POIOffsets.exit.h)
     return { objects, POIOffsets }
-end
-
--- Exports
-
-exports('CreateStore1', CreateStore1)
-exports('CreateOffice1', CreateOffice1)
-exports('CreateMichael', CreateMichael)
-exports('CreateFurniMid', CreateFurniMid)
-exports('CreateGarageMed', CreateGarageMed)
-exports('DespawnInterior', DespawnInterior)
-exports('CreateContainer', CreateContainer)
-exports('CreateWarehouse1', CreateWarehouse1)
-exports('CreateRanchShell', CreateRanchShell)
-exports('CreateTier1House', CreateTier1House)
-exports('CreateLesterShell', CreateLesterShell)
-exports('CreateHouseRobbery', CreateHouseRobbery)
-exports('CreateTrevorsShell', CreateTrevorsShell)
-exports('CreateCaravanShell', CreateCaravanShell)
-exports('CreateFranklinAunt', CreateFranklinAunt)
-exports('CreateApartmentShell', CreateApartmentShell)
-exports('CreateFurniMotelModern', CreateFurniMotelModern)
-exports('CreateApartmentFurnished', CreateApartmentFurnished)
-exports('CreateFurniMotelStandard', CreateFurniMotelStandard)
+end)
