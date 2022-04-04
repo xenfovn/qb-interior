@@ -1,4 +1,4 @@
--- Medium Housing Shells https://k4mb1.tebex.io/package/4672307
+-- Medium Housing Shells https://www.k4mb1maps.com/package/4672307
 
 local function CreateMedium2(spawn)
 	local objects = {}
@@ -38,7 +38,7 @@ local function CreateMedium3(spawn)
     return { objects, POIOffsets }
 end
 
--- Modern Housing Shells https://k4mb1.tebex.io/package/4673169
+-- Modern Housing Shells https://www.k4mb1maps.com/package/4673169
 
 local function CreateBanham(spawn)
 	local objects = {}
@@ -97,7 +97,7 @@ local function CreateWestons2(spawn)
     return { objects, POIOffsets }
 end
 
--- Classic Housing Shells https://k4mb1.tebex.io/package/4673140
+-- Classic Housing Shells https://www.k4mb1maps.com/package/4673140
 
 local function CreateClassicHouse(spawn)
 	local objects = {}
@@ -156,7 +156,7 @@ local function CreateClassicHouse3(spawn)
     return { objects, POIOffsets }
 end
 
--- Highend Housing Shells https://k4mb1.tebex.io/package/4673131
+-- Highend Housing Shells https://www.k4mb1maps.com/package/4673131
 
 local function CreateHighend1(spawn)
 	local objects = {}
@@ -215,7 +215,7 @@ local function CreateHighend3(spawn)
     return { objects, POIOffsets }
 end
 
--- Deluxe Housing Shells https://k4mb1.tebex.io/package/4673159
+-- Deluxe Housing Shells https://www.k4mb1maps.com/package/4673159
 
 local function CreateHighend(spawn)
 	local objects = {}
@@ -255,7 +255,7 @@ local function CreateHighendV2(spawn)
     return { objects, POIOffsets }
 end
 
--- Stash House Shells https://k4mb1.tebex.io/package/4673273
+-- Stash House Shells https://www.k4mb1maps.com/package/4673273
 
 local function CreateStashHouse(spawn)
 	local objects = {}
@@ -295,7 +295,7 @@ local function CreateStashHouse2(spawn)
     return { objects, POIOffsets }
 end
 
--- Garage Shells https://k4mb1.tebex.io/package/4673177
+-- Garage Shells https://www.k4mb1maps.com/package/4673177
 
 local function CreateGarageLow(spawn)
 	local objects = {}
@@ -335,7 +335,7 @@ local function CreateGarageHigh(spawn)
     return { objects, POIOffsets }
 end
 
--- Office Shells https://k4mb1.tebex.io/package/4673258
+-- Office Shells https://www.k4mb1maps.com/package/4673258
 
 local function CreateOffice2(spawn)
 	local objects = {}
@@ -375,7 +375,7 @@ local function CreateOfficeBig(spawn)
     return { objects, POIOffsets }
 end
 
--- Store Shells https://k4mb1.tebex.io/package/4673264
+-- Store Shells https://www.k4mb1maps.com/package/4673264
 
 local function CreateBarber(spawn)
 	local objects = {}
@@ -453,7 +453,7 @@ local function CreateStore3(spawn)
     return { objects, POIOffsets }
 end
 
--- Warehouse Shells https://k4mb1.tebex.io/package/4673185
+-- Warehouse Shells https://www.k4mb1maps.com/package/4673185
 
 local function CreateWarehouse2(spawn)
 	local objects = {}
@@ -493,7 +493,7 @@ local function CreateWarehouse3(spawn)
     return { objects, POIOffsets }
 end
 
--- Highend Lab Shells https://k4mb1.tebex.io/package/4698329
+-- Highend Lab Shells https://www.k4mb1maps.com/package/4698329
 
 local function CreateK4Coke(spawn)
 	local objects = {}
@@ -552,7 +552,7 @@ local function CreateK4Weed(spawn)
     return { objects, POIOffsets }
 end
 
--- Furnished Stash House Shells https://k4mb1.tebex.io/package/4672293
+-- Furnished Stash House Shells  https://www.k4mb1maps.com/package/4672293
 
 local function CreateContainer2(spawn)
 	local objects = {}
@@ -611,7 +611,7 @@ local function CreateFurniStash3(spawn)
     return { objects, POIOffsets }
 end
 
--- Furnished Housing Shells https://k4mb1.tebex.io/package/4672272
+-- Furnished Housing Shells https://www.k4mb1maps.com/package/4672272
 
 local function CreateFurniLow(spawn)
 	local objects = {}
@@ -651,7 +651,7 @@ local function CreateFurniMotel(spawn)
     return { objects, POIOffsets }
 end
 
--- Furnished Motel Shells https://k4mb1.tebex.io/package/4672296
+-- Furnished Motel Shells  https://www.k4mb1maps.com/package/4672296
 
 local function CreateFurniMotelClassic(spawn)
 	local objects = {}
@@ -691,7 +691,7 @@ local function CreateFurniMotelHigh(spawn)
     return { objects, POIOffsets }
 end
 
--- Furnished Modern Hotels https://k4mb1.tebex.io/package/4672290
+-- Furnished Modern Hotels https://www.k4mb1maps.com/package/4672290
 
 local function CreateFurniMotelModern2(spawn)
 	local objects = {}
@@ -731,7 +731,7 @@ local function CreateFurniMotelModern3(spawn)
     return { objects, POIOffsets }
 end
 
--- Drug Lab Shells https://k4mb1.tebex.io/package/4672285
+-- Drug Lab Shells https://www.k4mb1maps.com/package/4672285
 
 local function CreateCoke(spawn)
 	local objects = {}
@@ -828,7 +828,7 @@ local function CreateWeed2(spawn)
     return { objects, POIOffsets }
 end
 
--- Mansions
+-- k4mb1 Mansion Housing https://www.k4mb1maps.com/package/4783251
 
 local function CreateMansion(spawn)
 	local objects = {}
